@@ -1,0 +1,26 @@
+{
+  "name": "projectweek8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "checkpoint": "git add .  && git commit -F - && git push origin master ",
+    "pretest": "npm install",
+    "test": "node main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quvang/projectweek8.git"
+  },
+  "keywords": [],
+  "author": "Sune, Hanna, Annekathrine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Quvang/projectweek8/issues"
+  },
+  "homepage": "https://github.com/Quvang/projectweek8#readme",
+  "dependencies": {
+    "http": "0.0.0",
+    "http-status-codes": "^1.4.0"
+  }
+}
