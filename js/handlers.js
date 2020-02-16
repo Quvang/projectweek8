@@ -3,9 +3,16 @@
  * handlers.js
  * Requesthandlers to be called by the router mechanism
  */
+ const filesystem = require("fs");
 module.exports = {
     home(req, res) {
-        res.end("<h1>Front Page</h1>");
+      filesystem.readFile("views/index.html", function(err, data) {
+        if (err) {
+            res.end("<h1>The page you wanted doesn't exist</h1>");
+        }
+        res.write(data);
+        res.end();
+      });
     },
     info(req, res) {
         res.end("<h1>Info Page</h1>");
