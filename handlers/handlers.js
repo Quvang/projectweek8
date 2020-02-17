@@ -6,13 +6,7 @@
  const filesystem = require("fs");
 module.exports = {
     home(req, res) {
-      filesystem.readFile("views/index.html", function(err, data) {
-        if (err) {
-            res.end("<h1>The page you wanted doesn't exist</h1>");
-        }
-        res.write(data);
-        res.end();
-      });
+        res.end("<h1>Home Page</h1>");
     },
     info(req, res) {
         res.end("<h1>Info Page</h1>");
