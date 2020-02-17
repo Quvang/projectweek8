@@ -1,9 +1,9 @@
 "use strict";
 /*
- * check if routed handler function exists
- * if yes call it, else complain
+ * Tjekker om routed handler funktionen eksistere
+ * If man kalder den så ja, eller så brokker den sig
  */
-const handlers = require("./handlers");               // handlers module
+const handlers = require("../handlers/handler");               // handlers module
 
 const requestHandlers = {                             // application urls here
     "/home": handlers.home,
