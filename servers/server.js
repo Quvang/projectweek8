@@ -3,7 +3,7 @@
  *  new server.js adds request body data
  */
 const http = require("http");                   // http module
-const lib = require("../js/libWebUtil");   // home grown utilities
+const lib = require("../private/libWebUtil");   // home grown utilities
 const hostname = "localhost";
 const port = Number(process.argv[2]) || 3000;
 
