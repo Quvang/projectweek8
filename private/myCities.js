@@ -29,6 +29,7 @@ const cities = function(obj) {
 
     let dynamic = "";
     dynamic += `<p><em>${obj[0].navn}</em></p>`;
+    dynamic += `<p><em>${obj[0].befolkningstal}</em></p>`;
 
 
     return htmltop + dynamic + htmlbot;
