@@ -28,10 +28,10 @@ const cities = function(obj) {
 </html>`;
 
     let dynamic = "";
-    dynamic += `<p><em>${obj[0].navn}</em></p>`;
+    dynamic += `<p><em>${obj[0].name}</em></p>`;
 
 
     return htmltop + dynamic + htmlbot;
 }
 
-exports.country = country;
+exports.cities = cities;

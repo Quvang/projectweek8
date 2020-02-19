@@ -6,7 +6,7 @@ const cities = function(obj) {
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>McKilroy's Second Test Template</title>
+        <titleCities</title>
         <link rel="stylesheet" href="side.css"/>
     </head>
     <body>
@@ -28,7 +28,7 @@ const cities = function(obj) {
 </html>`;
 
     let dynamic = "";
-    dynamic += `<p><em>${obj[0].name}</em></p>`;
+    dynamic += `<p><em>${obj[0].navn}</em></p>`;
 
 
     return htmltop + dynamic + htmlbot;

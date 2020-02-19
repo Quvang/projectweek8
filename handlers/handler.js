@@ -41,17 +41,14 @@ module.exports = {
             "Content-Type": "text/html; charset=utf-8"
         });
         res.write(experimental.receipt(obj));           // home made templating for native node
-        res.end();
     },
 
-    findCitiesOld(req, res) {
+    findCities(req, res) {
         const mongo = require('mongodb');
         const dbname = "world";
         const constr = `mongodb://localhost:27017`;
 
-        mongo.connect(
-            constr, { useNewUrlParser: true, useUnifiedTopology: true},
-                                                        function (error, con) {
+        mongo.connect(constr, { useNewUrlParser: true, useUnifiedTopology: true}, function (error, con) {
             if (error) {
                 throw error;
             }
@@ -59,33 +56,17 @@ module.exports = {
             /* Retrieve,
              * reads cities from the database
              */
-            db.collection("city").find().toArray(function (err, city) {
+            db.collection("by").find().toArray(function (err, city) {
                 if (err) {
                     throw err;
                 }
-                res.writeHead(httpStatus.OK, { "Content-Type": "text/html; charset=utf-8" } ); /* yes, write relevant header */
+                res.writeHead(httpStatus.OK, {
+                   "Content-Type": "text/html; charset=utf-8" } ); /* yes, write relevant header */
                 res.write(experimental1.cities(city));           // home made templating for native node
-                res.end();
                 con.close();
-            });
-        });
-    },
-
-    findCities(req, res) {
-        const mon = require('./monModelMod');
-        const dbName = "world";
-        const coll = "by";
-        mon.monCon(dbName, function(err, db) {
-            if (err) throw err;
-            mon.monR(db, coll, null, function(err, result) {
-                if (err) throw err;
-                res.writeHead(httpStatus.OK, {                  // yes, write relevant header
-                    "Content-Type": "text/html; charset=utf-8"
-                });
-                res.write(experimental1.cities(result));           // home made templating for native node
                 res.end();
             });
         });
-
     }
+
 }
