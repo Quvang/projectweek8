@@ -44,7 +44,7 @@ exports.route = function(req, res, body) {          // routing
         type = contentTypes.js;
     } else if (req.url.indexOf(".css") !== -1) {
         asset = "css";
-        routedUrl = "" + req.url;
+        routedUrl = "public/css" + req.url;
         type = contentTypes.css;
     } else if (req.url.indexOf(".png") !== -1) {
         asset = "png";
