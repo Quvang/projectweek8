@@ -14,10 +14,10 @@ const cities = function(obj) {
             <h1>Kilroy's Cities</h1>
             <nav>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/side">Side</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li class="nav"><a href="/">Home</a></li>
+                    <li class="nav"><a href="/side">Side</a></li>
+                    <li class="nav"><a href="/about">About</a></li>
+                    <li class="nav"><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
