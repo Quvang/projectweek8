@@ -17,9 +17,9 @@ const contentTypes = {
 const routes = {                                    // register handles to routes
     "GET": {
         "/start": handlers.getAndRespond,
-        "/country": handlers.getAndRespond,
-        "/city": handlers.findCitiesOld,
-        "/language": handlers.getAndRespond,
+        "/country": handlers.findCities,
+        "/city": handlers.findCities,
+        "/lang": handlers.findCities,
         "js": handlers.getAndRespond,
         "css": handlers.getAndRespond,
         "png": handlers.getAndRespond,
@@ -40,11 +40,11 @@ exports.route = function(req, res, body) {          // routing
     let routedUrl;
     if (req.url.indexOf(".js") !== -1) {            // check for asset types
         asset = "js";
-        routedUrl = "public/javascripts" + req.url;
+        routedUrl = "public/js" + req.url;
         type = contentTypes.js;
     } else if (req.url.indexOf(".css") !== -1) {
         asset = "css";
-        routedUrl = "public/stylesheets" + req.url;
+        routedUrl = "public/css" + req.url;
         type = contentTypes.css;
     } else if (req.url.indexOf(".png") !== -1) {
         asset = "png";
@@ -77,11 +77,15 @@ exports.route = function(req, res, body) {          // routing
             type = contentTypes.html;
         } else if (req.url === "/city") {
             asset = req.url;
-            routedUrl = "pages/side.html";
-            type = contentTypes.html;
+            routes[req.method][asset](req, res);
+            return;
+        } else if (req.url === "/contact" && req.method === "POST") {
+            asset = req.url;
+            routes[req.method][asset](req, res, body);
+            return;
         } else {
             asset = req.url;
-            routedUrl = "pages" + req.url + ".html";
+            routedUrl = "views" + req.url + ".html";
             type = contentTypes.html;
         }
     }
