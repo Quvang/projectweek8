@@ -22,6 +22,7 @@
   "dependencies": {
     "fs": "0.0.1-security",
     "http": "0.0.0",
-    "http-status-codes": "^1.4.0"
+    "http-status-codes": "^1.4.0",
+    "mongodb": "^3.5.3"
   }
 }
