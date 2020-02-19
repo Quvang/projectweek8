@@ -6,6 +6,7 @@
 const fs = require("fs");                           // file system access
 const httpStatus = require("http-status-codes");
 const lib = require("../private/libWebUtil");           // home grown utilities
+const experimental = require("../private/myTemplater"); // highly experimental template
 const experimental1 = require("../private/myCities"); // highly experimental template
 
 const goError = function(res) {
@@ -62,9 +63,7 @@ module.exports = {
                 if (err) {
                     throw err;
                 }
-                res.writeHead(httpStatus.OK, {                  // yes, write relevant header
-                    "Content-Type": "text/html; charset=utf-8"
-                });
+                res.writeHead(httpStatus.OK, { "Content-Type": "text/html; charset=utf-8" } ); /* yes, write relevant header */
                 res.write(experimental1.cities(city));           // home made templating for native node
                 res.end();
                 con.close();
