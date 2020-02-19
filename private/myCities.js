@@ -7,17 +7,17 @@ const cities = function(obj) {
     <head>
         <meta charset="utf-8"/>
         <titleCities</title>
-        <link rel="stylesheet" href="side.css"/>
+        <link rel="stylesheet" href="/public/style.css"/>
     </head>
     <body>
         <header>
             <h1>Kilroy's Cities</h1>
             <nav>
                 <ul>
-                    <li class="nav"><a href="/">Home</a></li>
-                    <li class="nav"><a href="/side">Side</a></li>
-                    <li class="nav"><a href="/about">About</a></li>
-                    <li class="nav"><a href="/contact">Contact</a></li>
+                    <li class="navb"><a href="/">Home</a></li>
+                    <li class="navb"><a href="/side">Side</a></li>
+                    <li class="navb"><a href="/about">About</a></li>
+                    <li class="navb"><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
