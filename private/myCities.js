@@ -7,7 +7,7 @@ const cities = function(obj) {
     <head>
         <meta charset="utf-8"/>
         <titleCities</title>
-        <link rel="stylesheet" href="../public/style.css"/>
+        <link rel="stylesheet" href="../public/css/style.css"/>
     </head>
     <body>
         <header>
