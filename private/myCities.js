@@ -13,7 +13,7 @@ const cities = function(obj) {
         <header>
             <h1>Kilroy's Cities</h1>
             <nav>
-                <ul>
+                <ul class="nav">
                     <li class="navb"><a href="/">Home</a></li>
                     <li class="navb"><a href="/side">Side</a></li>
                     <li class="navb"><a href="/about">About</a></li>
