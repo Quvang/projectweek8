@@ -59,7 +59,7 @@ module.exports = {
             /* Retrieve,
              * reads cities from the database
              */
-            db.collection("by").find().toArray(function (err, city) {
+            db.collection("city").find().toArray(function (err, city) {
                 if (err) {
                     throw err;
                 }
