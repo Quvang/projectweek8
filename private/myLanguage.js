@@ -28,10 +28,15 @@ const language = function(obj) {
     </body>
 </html>`;
 
-    let dynamic = "";
-    dynamic += `<p><em>${obj[0].sprog}</em></p>`;
-    dynamic += `<p><em>${obj[0].officielt}</em></p>`;
+    let dynamic = "<table><tr><th>Navn</th><th>kontinent</th><th>Areal</th><th>Befolkningstal</th><th>Styreform</th></tr>"; 
+    for (let i= 0; i < obj.length; i++) {
+    dynamic += `<tr><td>${obj[i].sprog}</td>`;
+    dynamic += `<td>${obj[i].land}</td>`;
+    dynamic += `<td>${obj[i].procentdel}</td>`;
+    dynamic += `<td>${obj[i].officielt}</td></tr>`;
+    };
 
+    dynamic += `</table>`;
 
     return htmltop + dynamic + htmlbot;
 }

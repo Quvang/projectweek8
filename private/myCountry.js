@@ -28,9 +28,16 @@ const country = function(obj) {
     </body>
 </html>`;
 
-    let dynamic = "";
-    dynamic += `<p><em>${obj[0].navn}</em></p>`;
+    let dynamic = "<table><tr><th>Navn</th><th>kontinent</th><th>Areal</th><th>Befolkningstal</th><th>Styreform</th></tr>"; 
+    for (let i= 0; i < obj.length; i++) {
+    dynamic += `<tr><td>${obj[i].navn}</td>`;
+    dynamic += `<td>${obj[i].kontinent}</td>`;
+    dynamic += `<td>${obj[i].areal}</td>`;
+    dynamic += `<td>${obj[i].befolkningstal}</td>`;
+    dynamic += `<td>${obj[i].styreform}</td></tr>`;
+};
 
+dynamic += `</table>`;
 
     return htmltop + dynamic + htmlbot;
 }
