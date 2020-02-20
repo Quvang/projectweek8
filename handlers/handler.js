@@ -10,7 +10,7 @@ const experimental = require("../private/myTemplater"); // highly experimental t
 const experimental1 = require("../private/myCountry"); // highly experimental template
 const experimental2 = require("../private/myCities"); // highly experimental template
 const experimental3 = require("../private/myLanguage"); // highly experimental template
-//const administration = require("../private/myAdmin"); // highly experimental template
+const administration = require("../private/myAdmin"); // highly experimental template
 
 const goError = function(res) {
     res.writeHead(httpStatus.NOT_FOUND, {   // http page not found, 404

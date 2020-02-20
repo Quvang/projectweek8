@@ -18,6 +18,7 @@ const country = function(obj) {
                     <li><a href="/country">Country</a></li>
                     <li><a href="/city">City</a></li>
                     <li><a href="/language">Language</a></li>
+                    <li><a href="/admin">Admin Area</a></li>
                 </ul>
             </nav>
         </header>

@@ -18,6 +18,7 @@ const cities = function(obj) {
                     <li><a href="/country">Country</a></li>
                     <li><a href="/city">City</a></li>
                     <li><a href="/language">Language</a></li>
+                    <li><a href="/admin">Admin Area</a></li>
                 </ul>
             </nav>
         </header>
@@ -28,7 +29,7 @@ const cities = function(obj) {
 </html>`;
 
     let dynamic = "<table><th>Navn</th><th>Land</th><th>befolkningstal</th><th>Hovedstad</th></table>";
-    
+
     for (let i= 0; i < obj.length; i++) {
         dynamic += `<tr><td>${obj[i].navn}</td></tr>`;
         dynamic += `<tr><td>${obj[i].land}</td></tr>`;
