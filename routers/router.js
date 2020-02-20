@@ -20,7 +20,7 @@ const routes = {                                    // register handles to route
         "/country": handlers.findCountry,
         "/city": handlers.findCities,
         "/language": handlers.findLanguage,
-        "/admin": handlers.getAndRespond,
+        "/admin": handlers.receiveData,
         "js": handlers.getAndRespond,
         "css": handlers.getAndRespond,
         "png": handlers.getAndRespond,
