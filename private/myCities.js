@@ -28,14 +28,17 @@ const cities = function(obj) {
     </body>
 </html>`;
 
-    let dynamic = "<table><th>Navn</th><th>Land</th><th>befolkningstal</th><th>Hovedstad</th></table>";
-
+    let dynamic = "<table><tr><th>Navn</th><th>Land</th><th>befolkningstal</th><th>Hovedstad</th></tr>"; 
     for (let i= 0; i < obj.length; i++) {
-        dynamic += `<tr><td>${obj[i].navn}</td></tr>`;
-        dynamic += `<tr><td>${obj[i].land}</td></tr>`;
-    }
+        dynamic += `<tr><td>${obj[i].navn}</td>`;
+        dynamic += `<td>${obj[i].land}</td>`;
+        dynamic += `<td>${obj[i].befolkningstal}</td>`;
+        dynamic += `<td>${obj[i].hovedstad}</td></tr>`;
+    };
+
+    dynamic += `</table>`;
 
     return htmltop + dynamic + htmlbot;
 }
 
-exports.cities = cities;
+exports.cities = cities; 
