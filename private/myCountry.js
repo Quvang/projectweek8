@@ -1,7 +1,7 @@
-/* myCities.js Home made experimental templating */
+/* myCountries.js Home made experimental templating */
 "use strict";
 
-const cities = function(obj) {
+const country = function(obj) {
     let htmltop = `<!doctype html>
 <html>
     <head>

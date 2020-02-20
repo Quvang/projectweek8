@@ -17,9 +17,9 @@ const contentTypes = {
 const routes = {                                    // register handles to routes
     "GET": {
         "/start": handlers.getAndRespond,
-        "/country": handlers.findCities,
+        "/country": handlers.findCountry,
         "/city": handlers.findCities,
-        "/lang": handlers.findCities,
+        "/language": handlers.findLanguage,
         "js": handlers.getAndRespond,
         "css": handlers.getAndRespond,
         "png": handlers.getAndRespond,
@@ -75,7 +75,15 @@ exports.route = function(req, res, body) {          // routing
             asset = req.url;
             routedUrl = "pages/index.html";
             type = contentTypes.html;
+        } else if (req.url === "/country") {
+            asset = req.url;
+            routes[req.method][asset](req, res);
+            return;
         } else if (req.url === "/city") {
+            asset = req.url;
+            routes[req.method][asset](req, res);
+            return;
+        } else if (req.url === "/language") {
             asset = req.url;
             routes[req.method][asset](req, res);
             return;
