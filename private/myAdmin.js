@@ -30,28 +30,26 @@ const adminsite = function(obj) {
 
     let dynamic = `<div class="main">
             <div "left">
+              <form action="/admin" method="POST" id="formCountry">
+               <label>Navn</label><br>
+               <input type="text" id="landnavn" name="navn"><br>
+               <label>Kontinent</label><br>
+               <input type="text" id="kontinent" name="kontinent"><br>
+               <label>Areal</label><br>
+               <input type="text" id="areal" name="areal"><br>
+               <label>Befolkningstal</label><br>
+               <input type="text" id="befolkning" name="befolkning"><br>
+               <label>Styreform</label><br>
+               <input type="text" id="styreform" name="styreform"><br>
+               <button type="submit">Send</button>
+              </form>
             </div>
             <div "right">
+              <form>
+
+              </form>
             </div>
             <h1>Tilføj Land</h1>
-            <div>
-                <p>You entered the following</p>
-                <h3>Subject</h3>
-                <p>${obj.POST.subject}</p>
-
-                <h3>Message</h3>
-                <pre>${obj.POST.message}</pre>
-
-                <h3>Name</h3>
-                <p>${obj.POST.name}</p>
-
-                <h3>Email</h3>
-                <p>${obj.POST.email}</p>
-            </div>
-            <div>
-                <h3>We will get back to you.</h3>
-                <p><a href="/">Return to front page</a><p>
-            </div>
             </div>`;
 
 

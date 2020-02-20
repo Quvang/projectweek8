@@ -7,7 +7,7 @@ const getJSONString = function (obj) {      // prettyprint obj
 }
 
 const makeWebArrays = function (req, data) {
-    let get = req.url.split("?");
+    let get = req.url + "html".split("?");
     let qs = "";
     if (get.length === 2) {
         qs = get[1];

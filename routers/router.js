@@ -20,7 +20,7 @@ const routes = {                                    // register handles to route
         "/country": handlers.findCountry,
         "/city": handlers.findCities,
         "/language": handlers.findLanguage,
-        "/admin": handlers.receiveData,
+        "/admin": handlers.getAndRespond,
         "js": handlers.getAndRespond,
         "css": handlers.getAndRespond,
         "png": handlers.getAndRespond,
@@ -31,7 +31,7 @@ const routes = {                                    // register handles to route
     },
 
     "POST": {
-        "/contact": handlers.receiveData
+        "/admin": handlers.receiveData
     }
 };
 
@@ -92,13 +92,13 @@ exports.route = function(req, res, body) {          // routing
             asset = req.url;
             routes[req.method][asset](req, res);
             return;
-        } else if (req.url === "/contact" && req.method === "POST") {
+        } else if (req.url === "/admin" && req.method === "POST") {
             asset = req.url;
             routes[req.method][asset](req, res, body);
             return;
         } else {
             asset = req.url;
-            routedUrl = "views" + req.url + ".html";
+            routedUrl = "pages" + req.url + ".html";
             type = contentTypes.html;
         }
     }
