@@ -1,0 +1,106 @@
+2020-02-20T10:00:00.597+0100 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-02-20T10:00:00.647+0100 I  CONTROL  [initandlisten] MongoDB starting : pid=8886 port=27017 dbpath=/Users/hannarundkvist/data/db 64-bit host=Hannas-MacBook-Pro.local
+2020-02-20T10:00:00.647+0100 I  CONTROL  [initandlisten] db version v4.2.3
+2020-02-20T10:00:00.648+0100 I  CONTROL  [initandlisten] git version: 6874650b362138df74be53d366bbefc321ea32d4
+2020-02-20T10:00:00.648+0100 I  CONTROL  [initandlisten] allocator: system
+2020-02-20T10:00:00.648+0100 I  CONTROL  [initandlisten] modules: none
+2020-02-20T10:00:00.648+0100 I  CONTROL  [initandlisten] build environment:
+2020-02-20T10:00:00.648+0100 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-02-20T10:00:00.648+0100 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-02-20T10:00:00.648+0100 I  CONTROL  [initandlisten] options: { storage: { dbPath: "/Users/hannarundkvist/data/db" } }
+2020-02-20T10:00:00.652+0100 W  STORAGE  [initandlisten] Detected unclean shutdown - /Users/hannarundkvist/data/db/mongod.lock is not empty.
+2020-02-20T10:00:00.654+0100 I  STORAGE  [initandlisten] Detected data files in /Users/hannarundkvist/data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-02-20T10:00:00.654+0100 W  STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2020-02-20T10:00:00.654+0100 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-02-20T10:00:01.193+0100 I  STORAGE  [initandlisten] WiredTiger message [1582189201:193217][8886:0x10fccbdc0], txn-recover: Recovering log 1 through 2
+2020-02-20T10:00:01.250+0100 I  STORAGE  [initandlisten] WiredTiger message [1582189201:250511][8886:0x10fccbdc0], txn-recover: Recovering log 2 through 2
+2020-02-20T10:00:01.389+0100 I  STORAGE  [initandlisten] WiredTiger message [1582189201:389933][8886:0x10fccbdc0], txn-recover: Main recovery loop: starting at 1/1499264 to 2/256
+2020-02-20T10:00:01.461+0100 I  STORAGE  [initandlisten] WiredTiger message [1582189201:461948][8886:0x10fccbdc0], txn-recover: Recovering log 1 through 2
+2020-02-20T10:00:01.523+0100 I  STORAGE  [initandlisten] WiredTiger message [1582189201:523030][8886:0x10fccbdc0], txn-recover: Recovering log 2 through 2
+2020-02-20T10:00:01.563+0100 I  STORAGE  [initandlisten] WiredTiger message [1582189201:563862][8886:0x10fccbdc0], txn-recover: Set global recovery timestamp: (0, 0)
+2020-02-20T10:00:01.629+0100 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-02-20T10:00:01.659+0100 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-02-20T10:00:01.660+0100 I  CONTROL  [initandlisten] 
+2020-02-20T10:00:01.660+0100 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2020-02-20T10:00:01.660+0100 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2020-02-20T10:00:01.660+0100 I  CONTROL  [initandlisten] 
+2020-02-20T10:00:01.660+0100 I  CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2020-02-20T10:00:01.660+0100 I  CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2020-02-20T10:00:01.660+0100 I  CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2020-02-20T10:00:01.660+0100 I  CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2020-02-20T10:00:01.660+0100 I  CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2020-02-20T10:00:01.660+0100 I  CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2020-02-20T10:00:01.660+0100 I  CONTROL  [initandlisten] 
+2020-02-20T10:00:01.660+0100 I  CONTROL  [initandlisten] 
+2020-02-20T10:00:01.660+0100 I  CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2020-02-20T10:00:01.711+0100 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-02-20T10:00:01.730+0100 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-02-20T10:00:01.732+0100 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-02-20T10:00:01.739+0100 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-02-20T10:00:01.744+0100 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-02-20T10:00:01.744+0100 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/hannarundkvist/data/db/diagnostic.data'
+2020-02-20T10:00:01.748+0100 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-02-20T10:00:01.748+0100 I  NETWORK  [listener] Listening on /tmp/mongodb-27017.sock
+2020-02-20T10:00:01.748+0100 I  NETWORK  [listener] Listening on 127.0.0.1
+2020-02-20T10:00:01.748+0100 I  NETWORK  [listener] waiting for connections on port 27017
+2020-02-20T10:00:01.748+0100 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2020-02-20T10:00:02.030+0100 I  FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2020-02-20T10:00:02.077+0100 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-02-20T10:00:52.701+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:49730 #1 (1 connection now open)
+2020-02-20T10:00:52.713+0100 I  NETWORK  [conn1] received client metadata from 127.0.0.1:49730 conn1: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:00:52.722+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:49731 #2 (2 connections now open)
+2020-02-20T10:00:52.723+0100 I  NETWORK  [conn2] received client metadata from 127.0.0.1:49731 conn2: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:00:52.725+0100 I  SHARDING [conn2] Marking collection world.by as collection version: <unsharded>
+2020-02-20T10:00:52.767+0100 I  NETWORK  [conn1] end connection 127.0.0.1:49730 (1 connection now open)
+2020-02-20T10:00:52.770+0100 I  NETWORK  [conn2] end connection 127.0.0.1:49731 (0 connections now open)
+2020-02-20T10:01:07.613+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:49740 #3 (1 connection now open)
+2020-02-20T10:01:07.615+0100 I  NETWORK  [conn3] received client metadata from 127.0.0.1:49740 conn3: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:01:07.618+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:49741 #4 (2 connections now open)
+2020-02-20T10:01:07.618+0100 I  NETWORK  [conn4] received client metadata from 127.0.0.1:49741 conn4: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:01:07.621+0100 I  NETWORK  [conn3] end connection 127.0.0.1:49740 (1 connection now open)
+2020-02-20T10:01:07.621+0100 I  NETWORK  [conn4] end connection 127.0.0.1:49741 (0 connections now open)
+2020-02-20T10:01:15.836+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:49750 #5 (1 connection now open)
+2020-02-20T10:01:15.837+0100 I  NETWORK  [conn5] received client metadata from 127.0.0.1:49750 conn5: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:01:15.839+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:49751 #6 (2 connections now open)
+2020-02-20T10:01:15.840+0100 I  NETWORK  [conn6] received client metadata from 127.0.0.1:49751 conn6: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:01:15.850+0100 I  NETWORK  [conn6] end connection 127.0.0.1:49751 (1 connection now open)
+2020-02-20T10:01:15.850+0100 I  NETWORK  [conn5] end connection 127.0.0.1:49750 (0 connections now open)
+2020-02-20T10:28:18.959+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50244 #7 (1 connection now open)
+2020-02-20T10:28:18.964+0100 I  NETWORK  [conn7] received client metadata from 127.0.0.1:50244 conn7: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:28:18.976+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50245 #8 (2 connections now open)
+2020-02-20T10:28:18.977+0100 I  NETWORK  [conn8] received client metadata from 127.0.0.1:50245 conn8: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:28:18.989+0100 I  NETWORK  [conn8] end connection 127.0.0.1:50245 (1 connection now open)
+2020-02-20T10:28:18.989+0100 I  NETWORK  [conn7] end connection 127.0.0.1:50244 (0 connections now open)
+2020-02-20T10:38:55.712+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50453 #9 (1 connection now open)
+2020-02-20T10:38:55.719+0100 I  NETWORK  [conn9] received client metadata from 127.0.0.1:50453 conn9: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:38:55.727+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50454 #10 (2 connections now open)
+2020-02-20T10:38:55.728+0100 I  NETWORK  [conn10] received client metadata from 127.0.0.1:50454 conn10: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:38:55.730+0100 I  SHARDING [conn10] Marking collection world.country as collection version: <unsharded>
+2020-02-20T10:38:55.740+0100 I  NETWORK  [conn9] end connection 127.0.0.1:50453 (1 connection now open)
+2020-02-20T10:38:55.744+0100 I  NETWORK  [conn10] end connection 127.0.0.1:50454 (0 connections now open)
+2020-02-20T10:38:58.399+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50456 #11 (1 connection now open)
+2020-02-20T10:38:58.400+0100 I  NETWORK  [conn11] received client metadata from 127.0.0.1:50456 conn11: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:38:58.403+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50457 #12 (2 connections now open)
+2020-02-20T10:38:58.404+0100 I  NETWORK  [conn12] received client metadata from 127.0.0.1:50457 conn12: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:38:58.404+0100 I  SHARDING [conn12] Marking collection world.sprog as collection version: <unsharded>
+2020-02-20T10:38:58.410+0100 I  NETWORK  [conn11] end connection 127.0.0.1:50456 (1 connection now open)
+2020-02-20T10:38:58.410+0100 I  NETWORK  [conn12] end connection 127.0.0.1:50457 (0 connections now open)
+2020-02-20T10:39:00.546+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50459 #13 (1 connection now open)
+2020-02-20T10:39:00.546+0100 I  NETWORK  [conn13] received client metadata from 127.0.0.1:50459 conn13: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:39:00.550+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50460 #14 (2 connections now open)
+2020-02-20T10:39:00.551+0100 I  NETWORK  [conn14] received client metadata from 127.0.0.1:50460 conn14: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:39:00.554+0100 I  NETWORK  [conn13] end connection 127.0.0.1:50459 (1 connection now open)
+2020-02-20T10:39:00.554+0100 I  NETWORK  [conn14] end connection 127.0.0.1:50460 (0 connections now open)
+2020-02-20T10:39:02.389+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50464 #15 (1 connection now open)
+2020-02-20T10:39:02.391+0100 I  NETWORK  [conn15] received client metadata from 127.0.0.1:50464 conn15: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:39:02.393+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50465 #16 (2 connections now open)
+2020-02-20T10:39:02.394+0100 I  NETWORK  [conn16] received client metadata from 127.0.0.1:50465 conn16: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:39:02.396+0100 I  NETWORK  [conn15] end connection 127.0.0.1:50464 (1 connection now open)
+2020-02-20T10:39:02.396+0100 I  NETWORK  [conn16] end connection 127.0.0.1:50465 (0 connections now open)
+2020-02-20T10:42:59.978+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50532 #17 (1 connection now open)
+2020-02-20T10:42:59.986+0100 I  NETWORK  [conn17] received client metadata from 127.0.0.1:50532 conn17: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.3" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "19.3.0" } }
+2020-02-20T10:43:45.887+0100 I  COMMAND  [conn17] CMD: drop world.sprog
+2020-02-20T10:43:45.891+0100 I  STORAGE  [conn17] Finishing collection drop for world.sprog (89c8a8ad-f0b7-413a-9a70-3581bdd28c7a).
+2020-02-20T10:44:10.749+0100 I  STORAGE  [conn17] createCollection: world.sprog with generated UUID: bcf59cff-a03c-4db3-ba2f-59a841665163 and options: {}
+2020-02-20T10:44:10.790+0100 I  INDEX    [conn17] index build: done building index _id_ on ns world.sprog
+2020-02-20T10:49:35.980+0100 I  NETWORK  [conn17] end connection 127.0.0.1:50532 (0 connections now open)
