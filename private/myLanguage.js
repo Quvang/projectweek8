@@ -6,18 +6,18 @@ const language = function(obj) {
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Cities</title>
+        <title>Language</title>
         <link rel="stylesheet" href="./style.css"/>
     </head>
     <body>
         <header>
-            <h1>Kilroy's Cities</h1>
+            <h1>Language</h1>
             <nav>
-                <ul class="nav">
-                    <li class="navb"><a href="/">Home</a></li>
-                    <li class="navb"><a href="/side">Side</a></li>
-                    <li class="navb"><a href="/about">About</a></li>
-                    <li class="navb"><a href="/contact">Contact</a></li>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/country">Country</a></li>
+                    <li><a href="/city">City</a></li>
+                    <li><a href="/language">Language</a></li>
                 </ul>
             </nav>
         </header>

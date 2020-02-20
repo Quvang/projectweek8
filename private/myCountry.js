@@ -6,18 +6,18 @@ const country = function(obj) {
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>McKilroy's Second Test Template</title>
-        <link rel="stylesheet" href="side.css"/>
+        <title>Country</title>
+        <link rel="stylesheet" href="./style.css"/>
     </head>
     <body>
         <header>
-            <h1>Kilroy's Cities</h1>
+            <h1>Country</h1>
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/side">Side</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/country">Country</a></li>
+                    <li><a href="/city">City</a></li>
+                    <li><a href="/language">Language</a></li>
                 </ul>
             </nav>
         </header>
