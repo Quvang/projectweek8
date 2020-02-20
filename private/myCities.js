@@ -27,11 +27,11 @@ const cities = function(obj) {
     </body>
 </html>`;
 
-    let dynamic = "";
+    let dynamic = "<table><th>Navn</th><th>Land</th><th>befolkningstal</th><th>Hovedstad</th></table>";
     
     for (let i= 0; i < obj.length; i++) {
-        dynamic += `<p><em>${obj[i].navn}</em></p>`;
-        dynamic += `<p><em>${obj[i].befolkningstal}</em></p>`;
+        dynamic += `<tr><td>${obj[i].navn}</td></tr>`;
+        dynamic += `<tr><td>${obj[i].land}</td></tr>`;
     }
 
     return htmltop + dynamic + htmlbot;

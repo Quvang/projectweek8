@@ -60,9 +60,22 @@ p {
     line-height: 1.5em;
 }
 
-.navnb{
-    margin: 0 20px 0 20px;
+table {
+    width: 100%;
+  }
+  td, th {
+    color: #fff;
+    text-align: left;
     padding: 10px;
-}
+    background-color: #303030;
+  }
+
+  th {
+    font-size: 16px;
+  }
+
+  td {
+    font-size: 14px;
+  }
   
  
