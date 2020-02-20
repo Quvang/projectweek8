@@ -28,7 +28,7 @@ const language = function(obj) {
     </body>
 </html>`;
 
-    let dynamic = "<table><tr><th>Navn</th><th>kontinent</th><th>Areal</th><th>Befolkningstal</th><th>Styreform</th></tr>"; 
+    let dynamic = "<table><tr><th>Sprog</th><th>Land</th><th>Procentdel</th><th>Officielt</th></tr>"; 
     for (let i= 0; i < obj.length; i++) {
     dynamic += `<tr><td>${obj[i].sprog}</td>`;
     dynamic += `<td>${obj[i].land}</td>`;
