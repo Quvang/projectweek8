@@ -121,6 +121,60 @@ module.exports = {
                 res.end();
             });
         });
-    }
+    },
+    findLanguage(req, res) {
+        const mongo = require('mongodb');
+        const dbname = "world";
+        const constr = `mongodb://localhost:27017`;
+
+        mongo.connect(constr, { useNewUrlParser: true, useUnifiedTopology: true}, function (error, con) {
+            if (error) {
+                throw error;
+            }
+            const db = con.db(dbname);                  // make dbname the current db
+            /* Retrieve,
+             * reads cities from the database
+             */
+            db.collection("sprog").find().toArray(function (err, sprog) {
+                if (err) {
+                    throw err;
+                }
+                res.writeHead(httpStatus.OK, {
+                   "Content-Type": "text/html; charset=utf-8" } ); /* yes, write relevant header */
+                res.write(experimental3.language(sprog));           // home made templating for native node
+                con.close();
+                res.end();
+            });
+        });
+    },
+
+insertCountry () {
+  const mongo = require('mongodb');
+  const dbname = "world";
+  const constr = `mongodb://localhost:27017`;
+
+  mongo.connect(
+      constr, { useNewUrlParser: true, useUnifiedTopology: true},
+                                                  function (error, con) {
+      if (error) {
+          throw error;
+      }
+      console.log(`Connected to server`);
+      const db = con.db(dbname);                  // make dbname the current db
+      /* Create,
+       * inserts cities into the database
+       */
+      let obj = { name: "Aarhus", countrycode: "DNK", district: "Østjylland", population: 284846 };
+
+      db.collection("by").insertOne(obj, function (err, collection) {
+          if (err) {
+              throw err;
+          }
+          console.log("Ny by Indsat");
+          con.close();
+      });
+  });
+
+}
 
 }
