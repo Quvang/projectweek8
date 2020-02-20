@@ -40,6 +40,10 @@ li a:hover {
     color: #ccc;
 }
 
+g:hover {
+    fill: #202020;
+}
+
 h1 {
     text-decoration: none;
     color: #202020;
