@@ -20,6 +20,7 @@ const routes = {                                    // register handles to route
         "/country": handlers.findCountry,
         "/city": handlers.findCities,
         "/language": handlers.findLanguage,
+        //"/admin": handlers.getAndRespond,
         "js": handlers.getAndRespond,
         "css": handlers.getAndRespond,
         "png": handlers.getAndRespond,
@@ -87,7 +88,7 @@ exports.route = function(req, res, body) {          // routing
             asset = req.url;
             routes[req.method][asset](req, res);
             return;
-        } else if (req.url === "/admin" && req.method === "POST") {
+        } else if (req.url === "/contact" && req.method === "POST") {
             asset = req.url;
             routes[req.method][asset](req, res, body);
             return;

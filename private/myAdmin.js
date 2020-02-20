@@ -11,6 +11,11 @@ const receipt = function(obj) {
         <title>Tilføj & Rediger lande</title>
     </head>
     <body>
+        <div ="main">
+        <div "left">
+        </div>
+        <div "right">
+        </div>
         <h1>Tilføj Land</h1>
         <div>
             <p>You entered the following</p>
@@ -30,9 +35,10 @@ const receipt = function(obj) {
             <h3>We will get back to you.</h3>
             <p><a href="/">Return to front page</a><p>
         </div>
+        </div>
     </body>
 </html>`;
     return html;
 }
 
-exports.receipt = receipt;
+exports.administratin = administration;

@@ -10,6 +10,7 @@ const experimental = require("../private/myTemplater"); // highly experimental t
 const experimental1 = require("../private/myCountry"); // highly experimental template
 const experimental2 = require("../private/myCities"); // highly experimental template
 const experimental3 = require("../private/myLanguage"); // highly experimental template
+//const administration = require("../private/myAdmin"); // highly experimental template
 
 const goError = function(res) {
     res.writeHead(httpStatus.NOT_FOUND, {   // http page not found, 404
@@ -147,34 +148,4 @@ module.exports = {
             });
         });
     },
-
-insertCountry () {
-  const mongo = require('mongodb');
-  const dbname = "world";
-  const constr = `mongodb://localhost:27017`;
-
-  mongo.connect(
-      constr, { useNewUrlParser: true, useUnifiedTopology: true},
-                                                  function (error, con) {
-      if (error) {
-          throw error;
-      }
-      console.log(`Connected to server`);
-      const db = con.db(dbname);                  // make dbname the current db
-      /* Create,
-       * inserts cities into the database
-       */
-      let obj = { name: "Aarhus", countrycode: "DNK", district: "Østjylland", population: 284846 };
-
-      db.collection("by").insertOne(obj, function (err, collection) {
-          if (err) {
-              throw err;
-          }
-          console.log("Ny by Indsat");
-          con.close();
-      });
-  });
-
-}
-
 }
