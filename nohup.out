@@ -104,3 +104,21 @@
 2020-02-20T10:44:10.749+0100 I  STORAGE  [conn17] createCollection: world.sprog with generated UUID: bcf59cff-a03c-4db3-ba2f-59a841665163 and options: {}
 2020-02-20T10:44:10.790+0100 I  INDEX    [conn17] index build: done building index _id_ on ns world.sprog
 2020-02-20T10:49:35.980+0100 I  NETWORK  [conn17] end connection 127.0.0.1:50532 (0 connections now open)
+2020-02-20T10:50:52.687+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50640 #18 (1 connection now open)
+2020-02-20T10:50:52.692+0100 I  NETWORK  [conn18] received client metadata from 127.0.0.1:50640 conn18: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:50:52.706+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50641 #19 (2 connections now open)
+2020-02-20T10:50:52.707+0100 I  NETWORK  [conn19] received client metadata from 127.0.0.1:50641 conn19: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:50:52.713+0100 I  NETWORK  [conn18] end connection 127.0.0.1:50640 (1 connection now open)
+2020-02-20T10:50:52.715+0100 I  NETWORK  [conn19] end connection 127.0.0.1:50641 (0 connections now open)
+2020-02-20T10:51:30.886+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50683 #20 (1 connection now open)
+2020-02-20T10:51:30.891+0100 I  NETWORK  [conn20] received client metadata from 127.0.0.1:50683 conn20: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:51:30.898+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50684 #21 (2 connections now open)
+2020-02-20T10:51:30.899+0100 I  NETWORK  [conn21] received client metadata from 127.0.0.1:50684 conn21: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:51:30.906+0100 I  NETWORK  [conn20] end connection 127.0.0.1:50683 (1 connection now open)
+2020-02-20T10:51:30.908+0100 I  NETWORK  [conn21] end connection 127.0.0.1:50684 (0 connections now open)
+2020-02-20T10:53:10.852+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50751 #22 (1 connection now open)
+2020-02-20T10:53:10.860+0100 I  NETWORK  [conn22] received client metadata from 127.0.0.1:50751 conn22: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:53:10.867+0100 I  NETWORK  [listener] connection accepted from 127.0.0.1:50752 #23 (2 connections now open)
+2020-02-20T10:53:10.868+0100 I  NETWORK  [conn23] received client metadata from 127.0.0.1:50752 conn23: { driver: { name: "nodejs", version: "3.5.3" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.3.0" }, platform: "'Node.js v12.14.1, LE (unified)" }
+2020-02-20T10:53:10.876+0100 I  NETWORK  [conn22] end connection 127.0.0.1:50751 (1 connection now open)
+2020-02-20T10:53:10.878+0100 I  NETWORK  [conn23] end connection 127.0.0.1:50752 (0 connections now open)
