@@ -22,6 +22,13 @@ const routes = {                                    // register handles to route
         "/city": handlers.findCities,
         "/language": handlers.findLanguage,
         "/admin": handlers.getAndRespond,
+        "/af": handlers.findCountryByContinent,
+        "/ant": handlers.findCountryByContinent,
+        "/as": handlers.findCountryByContinent,
+        "/eu": handlers.findCountryByContinent,
+        "/na": handlers.findCountryByContinent,
+        "/oc": handlers.findCountryByContinent,
+        "/sa": handlers.findCountryByContinent,
         "js": handlers.getAndRespond,
         "css": handlers.getAndRespond,
         "png": handlers.getAndRespond,
@@ -81,6 +88,10 @@ exports.route = function(req, res, body) {          // routing
             asset = req.url;
             routes[req.method][asset](req, res);
             return;
+        } else if (req.url === "/af" || req.url === "/ant" || req.url === "/as" || req.url === "/eu" || req.url === "/na" || req.url === "/oc" || req.url === "/sa" ) {
+            asset = req.url;
+            routes[req.method][asset](req, res, asset);
+            return;
         } else if (req.url === "/city") {
             asset = req.url;
             routes[req.method][asset](req, res);
@@ -89,10 +100,10 @@ exports.route = function(req, res, body) {          // routing
             asset = req.url;
             routes[req.method][asset](req, res);
             return;
-        } else if (req.url === "/admin") {
-            asset = req.url;
-            routes[req.method][asset](req, res);
-            return;
+        } else if (req.url === "/admin" && req.method === "GET") {
+          asset = "/admin";
+          routedUrl = "pages/admin.html";
+          type = contentTypes.html;
         } else if (req.url === "/admin" && req.method === "POST") {
             asset = req.url;
             routes[req.method][asset](req, res, body);

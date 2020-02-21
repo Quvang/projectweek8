@@ -3,11 +3,11 @@
 "use strict";
 
 module.exports = {
-    "Africa": "Africa",
-    "Antarctica": "Antarctica",
-    "Asia": "Asia",
-    "Europe": "Europe",
-    "NorthAmerica": "North America",
-    "Oceania": "Oceania",
-    "SouthAmerica": "South America"
+    "af": "Afrika",
+    "ant": "Antarktis",
+    "as": "Asien",
+    "eu": "Europa",
+    "na": "North America",
+    "oc": "Oceania",
+    "sa": "South America"
 }

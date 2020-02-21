@@ -12,6 +12,8 @@ const experimental1 = require("../private/myCountry"); // myCountry template
 const experimental2 = require("../private/myCities"); // myCities template
 const experimental3 = require("../private/myLanguage"); // myLanguage template
 const administration = require("../private/myAdmin"); // myAdmin template
+const experimental4 = require("../private/af"); // myAdmin template
+
 
 const goError = function(res) {
     res.writeHead(httpStatus.NOT_FOUND, {   // http page not found, 404
@@ -127,11 +129,13 @@ module.exports = {
         });
     },
 
-    findCountryByContinent(req, res) {
+    findCountryByContinent(req, res, cont) {
       const mongo = require(`mongodb`);
       const dbname = "world";
       const constr = `mongodb://localhost:27017`;
-      const continent = "kontinent";
+      let continent = "kontinent";
+      cont = cont.substr(1);
+      cont = continents[cont];
       mongo.connect(constr, { useNewUrlParser: true, useUnifiedTopology: true}, function (error, con) {
           if (error) {
               throw error;
@@ -140,18 +144,20 @@ module.exports = {
           /* Retrieve,
            * reads cities from the database
            */
-          db.collection("sprog").find({continent: "Afrika"}).toArray(function (err, specific) {
+          let query = {};
+          query[continent] = cont;
+          console.log(query);
+          db.collection("country").find(query).toArray(function (err, specific) {
               if (err) {
                   throw err;
               }
               res.writeHead(httpStatus.OK, {
                  "Content-Type": "text/html; charset=utf-8" } ); /* yes, write relevant header */
-              res.write(experimental1.country(specific));           // home made templating for native node
+              res.write(experimental4.continent(specific));           // home made templating for native node
               con.close();
               res.end();
           });
       });
   },
 
-    }
 }
