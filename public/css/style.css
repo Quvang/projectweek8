@@ -123,12 +123,14 @@ button {
   background-color: #202020;
   color: #fff;
   font-size: 18px;
-  border: none;
+  border: 1px solid #202020;
   width: 50%;
   padding: 16px 32px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  transition: 0.3s;
+
 }
 
 button:hover {
