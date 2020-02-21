@@ -28,20 +28,21 @@ ul {
 li {
     display: block;
     text-align: center;
+    transition: 0.3s;
+
 }
   
-  li a {
+li a {
     display: block;
     color: #202020;
     padding: 14px 16px;
     text-decoration: none;
-    transition: 0.3s;
-
 }
 
 li a:hover {
     color: #fff;
     background-color: #202020;
+    transition: 0.3s;
 }
 
 g {
@@ -135,11 +136,11 @@ button {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 button:hover {
     background-color: #fff;
     color: #202020;
     border: 1px solid #202020;
+    transition: 0.3s;
   }
