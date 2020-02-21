@@ -11,7 +11,7 @@ const continent = function(obj) {
     </head>
     <body>
         <header>
-            <h1>City</h1>
+            <h1>Country</h1>
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>

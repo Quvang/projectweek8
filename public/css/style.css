@@ -26,7 +26,8 @@ ul {
 }
 
 li {
-    float: left;
+    display: block;
+    text-align: center;
 }
   
   li a {
@@ -37,7 +38,8 @@ li {
 }
 
 li a:hover {
-    color: #000;
+    color: #fff;
+    background-color: #202020;
 }
 
 g:hover {
