@@ -38,14 +38,14 @@ module.exports = {
             goError(res);                       // doesnt exist error
         }
     },
-    
+
 
     receiveData(req, res, data) {
         let obj = lib.makeWebArrays(req, data);         // home made GET and POST objects
         res.writeHead(httpStatus.OK, {                  // yes, write relevant header
             "Content-Type": "text/html; charset=utf-8"
         });
-        res.write(administration.adminsite(obj));
+        res.write(administration.admin(obj));
         res.end();           // home made templating for native node
     },
 

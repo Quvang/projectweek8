@@ -5,6 +5,7 @@ const httpStatus = require("http-status-codes");
 const contentTypes = {
     "text": { "Content-Type": "text/plain; charset=utf-8" },
     "start": { "Content-Type": "text/html; charset=utf-8" },
+    "admin": { "Content-type": "text/html; charset=utf-8"},
     "js": { "Content-Type": "application/js" },
     "css": { "Content-Type": "text/css" },
     "png": { "Content-Type": "image/png" },

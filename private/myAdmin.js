@@ -1,7 +1,7 @@
 /* myAdmin.js Home made experimental templating */
 "use strict";
 
-const adminsite = function(obj) {
+const admin = function(obj) {
     let htmltop = `<!doctype html>
 <html>
     <head>
@@ -56,4 +56,4 @@ const adminsite = function(obj) {
     return htmltop + dynamic + htmlbot;
 }
 
-exports.adminsite = adminsite;
+exports.admin = admin;
