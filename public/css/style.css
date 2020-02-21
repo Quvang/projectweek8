@@ -130,3 +130,9 @@ button {
   margin: 4px 2px;
   cursor: pointer;
 }
+
+button:hover {
+    background-color: #fff;
+    color: #202020;
+    border: 1px solid #202020;
+  }
