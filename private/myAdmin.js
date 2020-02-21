@@ -29,7 +29,7 @@ const admin = function(obj) {
 </html>`;
 
     let dynamic = `<div class="main">
-            <div "left">
+            <div class="left">
               <form action="/admin" method="POST" id="formCountry">
                <label>Navn</label><br>
                <input type="text" id="landnavn" name="navn"><br>
@@ -44,10 +44,35 @@ const admin = function(obj) {
                <button type="submit">Send</button>
               </form>
             </div>
-            <div "right">
-              <form>
-
-              </form>
+            <div class="middle">
+            <form action="/admin" method="POST" id="formCountry">
+             <label>Navn</label><br>
+             <input type="text" id="landnavn" name="navn"><br>
+             <label>Kontinent</label><br>
+             <input type="text" id="kontinent" name="kontinent"><br>
+             <label>Areal</label><br>
+             <input type="text" id="areal" name="areal"><br>
+             <label>Befolkningstal</label><br>
+             <input type="text" id="befolkning" name="befolkning"><br>
+             <label>Styreform</label><br>
+             <input type="text" id="styreform" name="styreform"><br>
+             <button type="submit">Send</button>
+            </form>
+            </div>
+            <div class="right">
+            <form action="/admin" method="POST" id="formCountry">
+             <label>Navn</label><br>
+             <input type="text" id="landnavn" name="navn"><br>
+             <label>Kontinent</label><br>
+             <input type="text" id="kontinent" name="kontinent"><br>
+             <label>Areal</label><br>
+             <input type="text" id="areal" name="areal"><br>
+             <label>Befolkningstal</label><br>
+             <input type="text" id="befolkning" name="befolkning"><br>
+             <label>Styreform</label><br>
+             <input type="text" id="styreform" name="styreform"><br>
+             <button type="submit">Send</button>
+            </form>
             </div>
             <h1>Tilføj Land</h1>
             </div>`;

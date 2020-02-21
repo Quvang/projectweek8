@@ -1,4 +1,4 @@
-/* myCities.js Home made experimental templating */
+/* af.js Home made template for continents */
 "use strict";
 
 const continent = function(obj) {
@@ -6,7 +6,7 @@ const continent = function(obj) {
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>City</title>
+        <title>Countries in this continent</title>
         <link rel="stylesheet" href="./style.css"/>
     </head>
     <body>
