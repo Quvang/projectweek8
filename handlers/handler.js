@@ -126,4 +126,32 @@ module.exports = {
             });
         });
     },
+
+    findCountryByContinent(req, res) {
+      const mongo = require(`mongodb`);
+      const dbname = "world";
+      const constr = `mongodb://localhost:27017`;
+      const continent = "kontinent";
+      mongo.connect(constr, { useNewUrlParser: true, useUnifiedTopology: true}, function (error, con) {
+          if (error) {
+              throw error;
+          }
+          const db = con.db(dbname);                  // make dbname the current db
+          /* Retrieve,
+           * reads cities from the database
+           */
+          db.collection("sprog").find({continent: "Afrika"}).toArray(function (err, specific) {
+              if (err) {
+                  throw err;
+              }
+              res.writeHead(httpStatus.OK, {
+                 "Content-Type": "text/html; charset=utf-8" } ); /* yes, write relevant header */
+              res.write(experimental1.country(specific));           // home made templating for native node
+              con.close();
+              res.end();
+          });
+      });
+  },
+
+    }
 }
