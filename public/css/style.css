@@ -1,7 +1,7 @@
 *{
 	box-sizing: border-box; 
 	padding: 0;
-	margin: 0;
+    margin: 0;
 }
 
 body {
@@ -52,8 +52,9 @@ h1 {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 25px;
     color: #202020;
+    padding-bottom: 10px;
 }
 
 p {
@@ -81,5 +82,51 @@ td {
     padding: 10px;
     background-color: rgb(230, 230, 230);
   }
-  
- 
+
+.main {
+    display: flex;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    margin: auto;
+    text-align: left;
+}
+
+.left, .middle, .right{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 500px;
+    margin: o auto;
+}
+
+label {
+    color: #202020;
+    padding-bottom: 10px;
+}
+
+form {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 8px 0;
+}
+
+input {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+  }
+
+button {
+  background-color: #202020;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  width: 50%;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
