@@ -1,5 +1,5 @@
 *{
-	box-sizing: border-box; 
+	box-sizing: border-box;
 	padding: 0;
     margin: 0;
 }
@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
-  
+
 }
 
 ul {
@@ -31,7 +31,7 @@ li {
     transition: 0.3s;
 
 }
-  
+
 li a {
     display: block;
     color: #202020;
@@ -66,7 +66,7 @@ h2 {
 
 p {
     font-size: 16px;
-    color: #202020; 
+    color: #202020;
     line-height: 1.5em;
 }
 
@@ -98,7 +98,8 @@ td {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
-    margin: auto;
+    margin: 0 auto;
+    justify-content: center;
     text-align: left;
 }
 
@@ -134,7 +135,7 @@ button {
   font-size: 18px;
   border: 1px solid #202020;
   width: 50%;
-  padding: 16px 32px;
+  padding: 0px 0px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
@@ -146,3 +147,22 @@ button:hover {
     border: 1px solid #202020;
     transition: 0.3s;
   }
+
+.adminbutton {
+	  background-color: #202020;
+	  color: #fff;
+	  font-size: 18px;
+	  border: 1px solid #202020;
+	  width: 25%;
+	  padding: 16px 32px;
+	  text-decoration: none;
+	  margin: 4px 2px;
+	  cursor: pointer;
+	}
+
+.adminbutton:hover {
+		 background-color: #fff;
+		 color: #202020;
+		 border: 1px solid #202020;
+		 transition: 0.3s;
+	}
