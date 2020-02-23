@@ -12,6 +12,7 @@ const experimental1 = require("../private/myCountry"); // myCountry template
 const experimental2 = require("../private/myCities"); // myCities template
 const experimental3 = require("../private/myLanguage"); // myLanguage template
 const administration = require("../private/myAdmin"); // myAdmin template
+const notThere = require("../private/myAdminNotThere"); // myAdmin template
 const experimental4 = require("../private/af"); // myAdmin template
 
 
@@ -95,17 +96,16 @@ module.exports = {
         const mongo = require('mongodb');
         const dbname = "world";
         const constr = `mongodb://localhost:27017`;
-        checkCont = continents[cont];
 
         let newCity = {
           navn: obj.POST.navn,
-          kontinent: obj.POST.kontinent,
-          areal: obj.POST.areal,
-          befolkningstal: obj.POST.befolkningstal,
-          styreform: obj.POST.styreform
+          land: obj.POST.land,
+          befolkningstal: obj.POST.befolking,
+          hovedstad: obj.POST.hovedstad
         };
 
-        let findCity = {};
+        let findCountry = {land: obj.POST.land};
+        let findCity = {navn: obj.POST.navn};
 
         mongo.connect(constr, { useNewUrlParser: true, useUnifiedTopology: true}, function (error, con) {
             if (error) {
@@ -117,10 +117,10 @@ module.exports = {
              * updates/inserts city in the database
              */
 
-            db.collection("by").findOne(findCity).then(isThere => {console.log(isThere);
+            db.collection("by").findOne(findCountry).then(isThere => {console.log(isThere);
                 if(isThere === null){
                   console.log("Landet eksistere ikke");
-                  res.write(administration.admin(obj));
+                  res.write(notThere.countryNotThere(obj.POST));
                   con.close();
                   res.end();
                 }else{
@@ -130,7 +130,7 @@ module.exports = {
                       if (err) {
                         throw err;
                       }
-                      console.log("City inserted/updated");
+                      console.log("City updated");
                       res.write(administration.admin(obj));
                       con.close();
                       res.end();
@@ -152,17 +152,16 @@ module.exports = {
         const mongo = require('mongodb');
         const dbname = "world";
         const constr = `mongodb://localhost:27017`;
-        checkCont = continents[cont];
 
         let newLanguage = {
-          navn: obj.POST.navn,
-          kontinent: obj.POST.kontinent,
-          areal: obj.POST.areal,
-          befolkningstal: obj.POST.befolkningstal,
-          styreform: obj.POST.styreform
+          sprog: obj.POST.sprog,
+          land: obj.POST.land,
+          procentdel: obj.POST.procentdel,
+          officielt: obj.POST.officielt
         };
 
-        let findCountry = {};
+        let findCountry = {navn: obj.POST.land};
+        let findSprog = {sprog: obj.POST.sprog};
 
         mongo.connect(constr, { useNewUrlParser: true, useUnifiedTopology: true}, function (error, con) {
             if (error) {
@@ -174,7 +173,7 @@ module.exports = {
              * updates/inserts city in the database
              */
 
-            db.collection("sprog").findOne(findCountry).then(isThere => {console.log(isThere);
+            db.collection("country").findOne(findCountry).then(isThere => {console.log(isThere);
                 if(isThere === null){
                   console.log("Landet eksistere ikke");
                   res.write(administration.admin(obj));
@@ -182,8 +181,8 @@ module.exports = {
                   res.end();
                 }else{
                   console.log("Landet eksistere allerede");
-                  db.collection("sprog").findOne(findCountry).then(isThere => {
-                    db.collection("city").updateOne(findCountry, {"$set": newCountry}, {upsert: true}, function(err, collection) {
+                  db.collection("sprog").findOne(findSprog).then(isThere => {
+                    db.collection("sprog").updateOne(findSprog, {"$set": newLanguage}, {upsert: true}, function(err, collection) {
                       if (err) {
                         throw err;
                       }

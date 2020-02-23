@@ -22,7 +22,6 @@ const routes = {                                    // register handles to route
         "/city": handlers.findCities,
         "/language": handlers.findLanguage,
         "/admin": handlers.getAndRespond,
-        "/admincountry": handlers.getAndRespond,
         "/admincity": handlers.getAndRespond,
         "/adminlanguage": handlers.getAndRespond,
         "/af": handlers.findCountryByContinent,
@@ -42,7 +41,9 @@ const routes = {                                    // register handles to route
     },
 
     "POST": {
-        "/admin": handlers.receiveDataCountry
+        "/admin": handlers.receiveDataCountry,
+        "/admincity": handlers.receiveDataCity,
+        "/adminlanguage": handlers.receiveDataLanguage
     }
 };
 
@@ -107,19 +108,23 @@ exports.route = function(req, res, body) {          // routing
             asset = "/admin";
             routedUrl = "pages/admin.html";
             type = contentTypes.html;
-        } else if (req.url === "/admincountry" && req.method === "GET") {
-            asset = "/admincountry";
-            routedUrl = "pages/admincountry.html";
-            type = contentTypes.html;
         } else if (req.url === "/admincity" && req.method === "GET") {
             asset = "/admincity";
             routedUrl = "pages/admincity.html";
             type = contentTypes.html;
-        } else if (req.url === "/adminlang" && req.method === "GET") {
+        } else if (req.url === "/adminlanguage" && req.method === "GET") {
             asset = "/adminlanguage";
-            routedUrl = "pages/admincity.html";
+            routedUrl = "pages/adminlanguage.html";
             type = contentTypes.html;
         } else if (req.url === "/admin" && req.method === "POST") {
+            asset = req.url;
+            routes[req.method][asset](req, res, body);
+            return;
+        } else if (req.url === "/admincity" && req.method === "POST") {
+            asset = req.url;
+            routes[req.method][asset](req, res, body);
+            return;
+        } else if (req.url === "/adminlanguage" && req.method === "POST") {
             asset = req.url;
             routes[req.method][asset](req, res, body);
             return;

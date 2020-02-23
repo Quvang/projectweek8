@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>City</title>
+        <link rel="stylesheet" href="./style.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>Admin Area</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/country">Country</a></li>
+                    <li><a href="/city">City</a></li>
+                    <li><a href="/language">Language</a></li>
+                    <li><a href="/admin">Admin Area</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div>
+        <div class="main">
+            <div class="left">
+              <a class="adminbutton" href="/admin">Indsæt/Rediger Land</a>
+            </div>
+
+            <div class="middle">
+                <a class="adminbutton" href="/admincity">Indsæt/Rediger BY</a>
+            </div>
+            <div class="right">
+                <form action="/adminlanguage" method="POST" id="formLanguage">
+                <h2>Tilføj sprog</h2>
+                <label>Sprog</label><br>
+                <input type="text" id="sprog" name="sprog"><br>
+                <label>Land</label><br>
+                <input type="text" id="landnavn" name="land"><br>
+                <label>Procentdel</label><br>
+                <input type="text" id="procentdel" name="procentdel"><br>
+                <label>Officielt</label><br>
+                <input type="text" id="officielt" name="officielt"><br>
+                <label></label><br>
+                <input type="hidden"><br><br><br>
+                <button type="submit">Tilføj</button>
+                </form>
+            </div>
+        </div>
+    </body>
+    </html>
